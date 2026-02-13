@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { PiHeartFill } from "react-icons/pi";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -266,9 +267,7 @@ export default function PhotoGallery() {
                     className="flex h-full w-full items-center justify-center"
                     style={{ background: photo.gradient }}
                   >
-                    <span className="text-6xl opacity-20 select-none">
-                      💜
-                    </span>
+                    <PiHeartFill className="h-14 w-14 select-none text-purple-300/20" />
                   </div>
                 )}
               </div>
@@ -282,9 +281,12 @@ export default function PhotoGallery() {
 
           {/* ── End card ── */}
           <div className="photo-card flex h-[60vh] w-[60vw] flex-shrink-0 flex-col items-center justify-center md:w-[30vw]">
-            <span className="mb-4 block text-7xl md:text-8xl select-none">
-            
-            </span>
+            <PiHeartFill
+              className="mb-4 h-20 w-20 select-none text-purple-400/40 md:h-24 md:w-24"
+              style={{
+                filter: "drop-shadow(0 0 15px rgba(168,85,247,0.3))",
+              }}
+            />
             <p
               className="font-serif text-lg italic text-purple-300/50 md:text-xl"
             >
